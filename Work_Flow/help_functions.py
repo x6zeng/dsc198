@@ -1,5 +1,7 @@
-# this python file assumes you already imported following pacakges:
-# sys, os, numpy, pandas
+import os
+import sys
+import numpy as np
+import pandas as pd
 
 # load data
 
@@ -25,7 +27,7 @@ def load_transaction_v():
 
 def load_label():
     transaction = load_transaction()
-    label = transaction['isFraud']
+    label = transaction[['isFraud']]
     del transaction
     return label
 
